@@ -26,7 +26,7 @@ source ~/px4-venv/bin/activate
 
 ### Клонируйте репозиторий
 ```commandline
-git clone https://github.com/monemati/PX4-ROS2-Gazebo-YOLOv8.git
+git clone https://github.com/Placebek/px4-jazzy-gazebo-yolov8
 cd PX4-ROS2-Gazebo-YOLOv8
 ```
 
