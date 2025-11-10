@@ -1,4 +1,4 @@
-# PX4-ROS2-Gazebo-YOLOv8
+# px4-jazzy-gazebo-yolov8
 Обнаружение объектов с воздуха с помощью дрона на базе PX4 Autopilot и ROS 2. Для симуляции используется PX4 SITL и Gazebo Harmonic. YOLOv8 применяется для обнаружения объектов.
 
 ---
@@ -85,12 +85,12 @@ export GZ_SIM_WORLD_PATH=~/PX4-Autopilot/Tools/simulation/gz/worlds
 
 - Скопируйте модели:
 ```commandline
-cp -r ~/PX4-ROS2-Gazebo-YOLOv8/models/* ~/PX4-Autopilot/Tools/simulation/gz/models
+cp -r ~/px4-jazzy-gazebo-yolov8/models/* ~/PX4-Autopilot/Tools/simulation/gz/models
 ```
 
 - Скопируйте мир:
 ```commandline
-cp ~/PX4-ROS2-Gazebo-YOLOv8/worlds/default.sdf ~/PX4-Autopilot/Tools/simulation/gz/worlds/
+cp ~/px4-jazzy-gazebo-yolov8/worlds/default.sdf ~/PX4-Autopilot/Tools/simulation/gz/worlds/
 ```
 
 - Измените угол камеры дрона (для лучшего обзора):
@@ -120,11 +120,11 @@ PX4_SYS_AUTOSTART=4001 PX4_GZ_MODEL_POSE="268.08,-128.22,3.86,0.00,0,-0.7" PX4_G
 ros2 run ros_gz_bridge parameter_bridge /camera@sensor_msgs/msg/Image@gz.msgs.Image
 
 # Терминал 4: YOLO-детекция
-cd ~/PX4-ROS2-Gazebo-YOLOv8
+cd ~/px4-jazzy-gazebo-yolov8
 python uav_camera_det.py  # Или упрощённая версия без cv_bridge
 
 # Терминал 5: Управление клавиатурой
-cd ~/PX4-ROS2-Gazebo-YOLOv8
+cd ~/px4-jazzy-gazebo-yolov8
 python keyboard-mavsdk-test.py
 ```
 - Кликните на пустое окно клавиатуры.
